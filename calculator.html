@@ -1,0 +1,60 @@
+<!-- calculator.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan Calculator - Phoenix Financial Consultant</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    function calculateEMI() {
+      const principal = parseFloat(document.getElementById("loanAmount").value);
+      const interestRate = parseFloat(document.getElementById("interestRate").value) / 12 / 100;
+      const tenure = parseInt(document.getElementById("tenure").value);
+
+      const emi = (principal * interestRate * Math.pow(1 + interestRate, tenure)) /
+                  (Math.pow(1 + interestRate, tenure) - 1);
+
+      document.getElementById("emiResult").innerText =
+        "Estimated EMI: ₹" + emi.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="assets/images/logo.png" alt="Phoenix Logo" class="logo" />
+    <h1>Phoenix Financial Consultant</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="apply.html">Apply Now</a></li>
+        <li><a href="calculator.html" class="active">Loan Calculator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Loan EMI Calculator</h2>
+      <label for="loanAmount">Loan Amount (₹):</label>
+      <input type="number" id="loanAmount" required>
+
+      <label for="interestRate">Interest Rate (% per year):</label>
+      <input type="number" id="interestRate" required>
+
+      <label for="tenure">Tenure (Months):</label>
+      <input type="number" id="tenure" required>
+
+      <button onclick="calculateEMI()">Calculate EMI</button>
+
+      <h3 id="emiResult"></h3>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Phoenix Financial Consultant. All rights reserved.</p>
+  </footer>
+</body>
+</html>
