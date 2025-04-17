@@ -1,0 +1,57 @@
+<!-- apply.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply Now - Phoenix Financial Consultant</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/images/logo.png" alt="Phoenix Logo" class="logo" />
+    <h1>Phoenix Financial Consultant</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="apply.html" class="active">Apply Now</a></li>
+        <li><a href="calculator.html">Loan Calculator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Apply for a Car Loan</h2>
+      <form action="https://formsubmit.co/phoenixfinancialconsultant07@gmail.com" method="POST">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="carType">Car Type:</label>
+        <select id="carType" name="carType" required>
+          <option value="">Select</option>
+          <option value="new">New Car</option>
+          <option value="used">Used Car</option>
+        </select>
+
+        <label for="loanAmount">Loan Amount (₹):</label>
+        <input type="number" id="loanAmount" name="loanAmount" required>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Phoenix Financial Consultant. All rights reserved.</p>
+  </footer>
+</body>
+</html>
